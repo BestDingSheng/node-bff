@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2018-03-18T13:30:29.088Z",
+    "end": "2018-03-18T13:30:29.171Z",
+    "duration": 83,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "4e08c299-fe81-4d49-aaeb-a59b173c1ffd",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "26ccd0c1-8a15-420e-b731-d7802bd52ff4",
+        "title": "NodeUII自动化测试脚本",
+        "fullFile": "/Users/yideng/Desktop/ydweb/tests/service/router.spec.js",
+        "file": "/tests/service/router.spec.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "cb968cb0-ce03-44e6-8df4-1318d37d7e28",
+            "title": "API接口测试",
+            "fullFile": "/Users/yideng/Desktop/ydweb/tests/service/router.spec.js",
+            "file": "/tests/service/router.spec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "获取测试的数据",
+                "fullTitle": "NodeUII自动化测试脚本 API接口测试 获取测试的数据",
+                "timedOut": false,
+                "duration": 35,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "request().\nget('/index/test').\nset('Accept','appliaction/json').\nexpect(\"Content-Type\",/json/).\nexpect(200)\n.end(function(err,response){\n    if(response.body.data == \"hello test\"){\n        done();\n    }else{\n        done(new Error(\"测试接口与期望数据不符合\"));\n    }\n});",
+                "err": {},
+                "isRoot": false,
+                "uuid": "2b6f997b-ccc6-49f3-8078-ffcfac8ea0ce",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "2b6f997b-ccc6-49f3-8078-ffcfac8ea0ce"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 35,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "558f5fd4-09e5-455f-86f5-fc9b73068baa",
+            "title": "NodeUII容错测试",
+            "fullFile": "/Users/yideng/Desktop/ydweb/tests/service/router.spec.js",
+            "file": "/tests/service/router.spec.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "测试404脚本容错http code",
+                "fullTitle": "NodeUII自动化测试脚本 NodeUII容错测试 测试404脚本容错http code",
+                "timedOut": false,
+                "duration": 14,
+                "state": "failed",
+                "pass": false,
+                "fail": true,
+                "pending": false,
+                "code": "request()\n.get(\"/message/notfound\")\n.expect(500,done);",
+                "err": {
+                  "message": "Error: expected 500 \"Internal Server Error\", got 404 \"Not Found\"",
+                  "estack": "Error: expected 500 \"Internal Server Error\", got 404 \"Not Found\"\n    at Test._assertStatus (node_modules/supertest/lib/test.js:266:12)\n    at Test._assertFunction (node_modules/supertest/lib/test.js:281:11)\n    at Test.assert (node_modules/supertest/lib/test.js:171:18)\n    at assert (node_modules/supertest/lib/test.js:131:12)\n    at /Users/yideng/Desktop/ydweb/node_modules/supertest/lib/test.js:128:5\n    at Test.Request.callback (node_modules/superagent/lib/node/index.js:718:3)\n    at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:906:18)\n    at endReadableNT (_stream_readable.js:1062:12)\n    at process._tickCallback (internal/process/next_tick.js:152:19)"
+                },
+                "isRoot": false,
+                "uuid": "c08f0b1c-67bd-48bc-b509-9f7befbafa4a",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [],
+            "failures": [
+              "c08f0b1c-67bd-48bc-b509-9f7befbafa4a"
+            ],
+            "pending": [],
+            "skipped": [],
+            "duration": 14,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2018
+}
